@@ -8,3 +8,5 @@ It's fairly simple to use. You can
 2. For every task added, you can Delete it.
 
 3. If a status is complete, the task is shown Faded. Pending tasks are highlighted.
+
+[Note: Do install bootstrap and react-router-dom in your computer to run the code in your device.]

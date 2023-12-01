@@ -1,16 +1,18 @@
 const TaskForm = ({ task, handleAddTask, onChange, status, handleStatusChange }) => {
 
   return (
-    <div>
+    <div className="taskForm">
       <h2>Task Manager</h2>
       <input
+        className="form-control"
         type="text"
-        placeholder="Task"
+        placeholder="Your Task Here"
         value={task}
         onChange={onChange}
         required
       />
         <input
+          id="status"
           type="radio"
           name="status"
           value="Complete"
@@ -20,6 +22,7 @@ const TaskForm = ({ task, handleAddTask, onChange, status, handleStatusChange })
         />
         Complete
         <input
+          id="status"
           type="radio"
           name="status"
           value="Pending"
@@ -28,7 +31,7 @@ const TaskForm = ({ task, handleAddTask, onChange, status, handleStatusChange })
           required
         />
         Pending
-      <button onClick={handleAddTask}>Add</button>
+      <button onClick={handleAddTask} className="btn btn-primary">Add</button>
     </div>
   );
 };

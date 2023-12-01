@@ -1,13 +1,24 @@
-import React from 'react'
+import React from "react";
 
-const TaskDisplay = ({task, status, onDelete}) => {
+const TaskDisplay = ({ index, task, status, onDelete }) => {
   return (
-    <div>
+    <tr className={status === "Complete" ? "complete" : ""}>
+      <td>
+        <span>{index + 1}</span>
+      </td>
+      <td>
         <span>{task}</span>
+      </td>
+      <td>
         <span>{status}</span>
-        <button onClick={onDelete}>Delete</button>
-    </div>
-  )
-}
+      </td>
+      <td className="d-flex justify-content-center align-items-center">
+        <button onClick={onDelete} className="btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  );
+};
 
-export default TaskDisplay
+export default TaskDisplay;

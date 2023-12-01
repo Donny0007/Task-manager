@@ -4,17 +4,17 @@ import TaskDisplay from "./TaskDisplay";
 const TaskList = ({ tasks, onDelete }) => {
   return (
     <div>
-      <table  className='table table-bordered table-stripped'>
+      <table className="table table-bordered table-stripped">
         <thead>
           <tr>
-              <th>S.N.</th>
-              <th>Task</th>
-              <th>Status</th>
-              <th>Action</th>
+            <th>S.N.</th>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-        {tasks.map((task, index) => (    
+          {tasks.map((task, index) => (
             <TaskDisplay
               key={index}
               index={index}
@@ -22,9 +22,10 @@ const TaskList = ({ tasks, onDelete }) => {
               status={task.status}
               onDelete={(index) => onDelete(index)}
             />
-        ))}   {/* Iterate each task and its attributes in a table */}
+          ))}{" "}
+          {/* Iterate each task and its attributes in a table */}
         </tbody>
-        </table>
+      </table>
     </div>
   );
 };

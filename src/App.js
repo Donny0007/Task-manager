@@ -4,7 +4,7 @@ import Homepage from "./Components/Homepage";
 import TaskList from "./Components/TaskList";
 import { useState } from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css"; 
+import "bootstrap/dist/css/bootstrap.css";
 
 const App = () => {
   const [task, setTask] = useState("");
@@ -17,15 +17,15 @@ const App = () => {
       const updatedTasks = [...tasks, { task, status }];
       setTasks(updatedTasks);
       setTask("");
-    } 
-  };  
-  
-/* Save the task status */
+    }
+  };
+
+  /* Save the task status */
   const handleStatusChange = (e) => {
     setStatus(e.target.value);
   };
 
-  // function to Set the task and the status 
+  // function to Set the task and the status
   const handleAddTask = () => {
     if (!status) {
       alert("Status required");
@@ -35,7 +35,7 @@ const App = () => {
     }
   };
 
-  //function to delete a task 
+  //function to delete a task
   const delTask = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
@@ -60,7 +60,8 @@ const App = () => {
             }
           />
         </Routes>
-        <TaskList tasks={tasks} onDelete={delTask} />   {/* function call to delete a task*/}
+        <TaskList tasks={tasks} onDelete={delTask} />{" "}
+        {/* function call to delete a task*/}
       </Router>
     </div>
   );

@@ -14,7 +14,7 @@ const TaskList = ({ tasks, onDelete }) => {
           </tr>
         </thead>
         <tbody>
-        {tasks.map((task, index) => (
+        {tasks.map((task, index) => (    
             <TaskDisplay
               key={index}
               index={index}
@@ -22,7 +22,7 @@ const TaskList = ({ tasks, onDelete }) => {
               status={task.status}
               onDelete={(index) => onDelete(index)}
             />
-        ))}
+        ))}   {/* Iterate each task and its attributes in a table */}
         </tbody>
         </table>
     </div>

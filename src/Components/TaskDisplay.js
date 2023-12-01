@@ -3,8 +3,9 @@ import React from "react";
 const TaskDisplay = ({ index, task, status, onDelete }) => {
   return (
     <tr className={status === "Complete" ? "complete" : ""}>
+       {/* Fade the completed tasks to highlight the pending ones */}
       <td>
-        <span>{index + 1}</span>
+        <span>{index + 1}</span>  {/* Serial Number since index starts from 0 */}
       </td>
       <td>
         <span>{task}</span>

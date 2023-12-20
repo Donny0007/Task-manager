@@ -39,7 +39,7 @@ tbody tr:hover {
   color: gray;
 }
 
-.taskForm h2{
+.container h2{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: url('/src/Images/buddha-colorful.jpg');
   color: beige;

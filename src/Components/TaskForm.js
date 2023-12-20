@@ -7,7 +7,6 @@ const TaskForm = ({
 }) => {
   return (
     <div className="taskForm">
-      <h2>Task Manager</h2>
       <input
         className="form-control"
         type="text"
